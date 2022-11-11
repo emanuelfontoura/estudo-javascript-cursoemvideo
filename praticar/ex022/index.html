@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body{
+            background-color: rgb(0, 119, 255);
+        }
+
+        .cabecalho > h1 {
+            text-align: center;
+            margin: 20px 0px;
+            color: white;
+        }
+
+        .principal{
+            min-height: 400px;
+            max-height: 700px;
+            width: 600px;
+            background-color: white;
+            margin: 0px auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.233);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .rodape span{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        #inum{
+            width: 35%;
+        }
+
+        #ilista{
+            display: block;
+            margin-top: 15px;
+        }
+        
+        p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Título</h1>
+    </header>
+
+    <section class="principal">
+        <div>
+            <label for="inum">Número (entre 1 e 100): </label>
+            <input type="number" name="num" id="inum">
+            <input type="submit" value="Adicionar" id="inpt" onclick="adicionar()">
+            <select name="lista" id="ilista" size="20">
+
+            </select>
+            <input type="button" value="Finalizar" style="margin-top: 10px;" onclick="finalizar()"> --> Pressione "f"
+        </div>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <span>&#169; Emanuel Fontoura</span>
+    </footer>
+
+    <a href=""></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

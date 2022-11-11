@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contagem</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Título</h1>
+    </header>
+
+    <section class="principal">
+        <div>
+            <label for="istart">Início: </label>
+            <input type="number" name="start" id="istart" required>
+        </div>
+
+        <div>
+            <label for="iend">Final: </label>
+            <input type="number" name="end" id="iend" required>
+        </div>
+
+        <div>
+            <label for="passo">Passo: </label>
+            <input type="number" name="passo" id="ipasso" required>
+        </div>
+
+        <input type="button" value="Contar" id="bttn" onclick="contar()">
+
+        <div id="iaviso"></div>
+    </section>
+
+    
+
+    <footer class="rodape">
+        <span>&#169; Curso em Vídeo</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

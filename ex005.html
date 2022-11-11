@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(13, 108, 185);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conhecendo o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="imsg" name="msg">Clique em mim</div>
+    <div id="isele">Pelo seletor</div>
+
+    <script>
+        var negrito = window.document.getElementsByTagName('strong')[0] // eu q mexi
+        negrito.style.color = 'red' // eu que mexi
+
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(`Está escrito assim: ${p1.innerHTML}`)
+        p1.style.color = 'orange'
+        corpo.style.backgroundColor = 'black'
+        
+        var d = window.document.getElementById('imsg')
+        d.style.backgroundColor = 'orange'
+        window.document.getElementById('imsg').innerText = 'Aguardando...'
+
+        var sele = window.document.querySelector('div#isele')
+        sele.style.backgroundColor = 'blue'
+        window.document.querySelector('div#isele').style.backgroundColor = 'red' // acessando HTML e CSS de uma vez só
+    </script>
+</body>
+</html>

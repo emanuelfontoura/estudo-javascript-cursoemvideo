@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body{
+            background-color: rgb(0, 119, 255);
+        }
+
+        .cabecalho > h1 {
+            text-align: center;
+            margin: 20px 0px;
+            color: white;
+        }
+
+        .principal{
+            height: 400px;
+            width: 600px;
+            background-color: white;
+            margin: 0px auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.233);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .rodape span{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        #iano{
+            width: 200px;
+        }
+
+        .principal > div > form > div + div{
+            margin-top: 15px;
+        }
+
+        #ifoto{
+            border-radius: 50%;
+            width: 220px;
+            height: 209px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #itexto{
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Título</h1>
+    </header>
+
+    <section class="principal">
+        <div>
+            <form method="post">
+                <div>
+                    <label for="iano">Ano de Nascimento: </label>
+                    <input type="number" name="ano" id="iano" required min="1900" max="2022" pattern="[0-9]{4}" >
+                </div>
+
+                <div>
+                    <label for="isexo">Sexo: </label>
+                    <input type="radio" name="sexo" id="masc"> Masculino
+                    <input type="radio" name="sexo" id="fem"> Feminino
+                </div>
+
+                <div>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                    <input type="reset" value="Limpar">
+                </div>
+
+            </form>
+        </div>
+
+        <div>
+            <div id="itexto">Característica</div>
+        </div>
+
+    </section>
+
+    <footer class="rodape">
+        <span>&#169; Emanuel Fontoura</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
